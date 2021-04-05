@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pybpl package &#8212; pyBPL 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="pyBPL: Python-based Bayesian Program Learning" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="pyBPL: Python-based Bayesian Program Learning"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pyBPL 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">pybpl package</a><ul>
+<li><a class="reference internal" href="#pybpl-ctd-module">pybpl.ctd module</a></li>
+<li><a class="reference internal" href="#pybpl-concept-module">pybpl.concept module</a></li>
+<li><a class="reference internal" href="#pybpl-part-module">pybpl.part module</a></li>
+<li><a class="reference internal" href="#pybpl-relation-module">pybpl.relation module</a></li>
+<li><a class="reference internal" href="#module-pybpl.library">pybpl.library module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">pyBPL: Python-based Bayesian Program Learning</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pybpl.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pybpl-package">
+<h1>pybpl package<a class="headerlink" href="#pybpl-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pybpl-ctd-module">
+<h2>pybpl.ctd module<a class="headerlink" href="#pybpl-ctd-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pybpl-concept-module">
+<h2>pybpl.concept module<a class="headerlink" href="#pybpl-concept-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pybpl-part-module">
+<h2>pybpl.part module<a class="headerlink" href="#pybpl-part-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="pybpl-relation-module">
+<h2>pybpl.relation module<a class="headerlink" href="#pybpl-relation-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pybpl.library">
+<span id="pybpl-library-module"></span><h2>pybpl.library module<a class="headerlink" href="#module-pybpl.library" title="Permalink to this headline">¶</a></h2>
+<p>The library module contains a Library class (and its dependencies) for
+loading the hyperparameters of a pre-fit BPL model. This is designed primarily
+for the Omniglot use case, enabling the transfer of parameters from the matlab
+BPL repo (see <a class="reference external" href="https://github.com/brendenlake/BPL">https://github.com/brendenlake/BPL</a>).</p>
+<p>Holds all parameters of the conditional probability
+distribution. These parameters have been learned from the training data.</p>
+<dl class="class">
+<dt id="pybpl.library.Library">
+<em class="property">class </em><code class="sig-prename descclassname">pybpl.library.</code><code class="sig-name descname">Library</code><span class="sig-paren">(</span><em class="sig-param">lib_dir=None</em>, <em class="sig-param">use_hist=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.Library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>LIBRARY: hyper-parameters for the BPL model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lib_dir</strong> (<em>string</em>) – path to the library files</p></li>
+<li><p><strong>use_hist</strong> (<em>bool</em>) – if true, the original BPL spatial histogram model will
+be used. The default (False) uses a new, differentiable
+spatial distribution</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="pybpl.library.Library.N">
+<em class="property">property </em><code class="sig-name descname">N</code><a class="headerlink" href="#pybpl.library.Library.N" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of primitives</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>N</strong> – the number of primitives</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.Library.check_consistent">
+<code class="sig-name descname">check_consistent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.Library.check_consistent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check consistency of the number of primitives in the model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.Library.isunif">
+<em class="property">property </em><code class="sig-name descname">isunif</code><a class="headerlink" href="#pybpl.library.Library.isunif" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.Library.ncpt">
+<em class="property">property </em><code class="sig-name descname">ncpt</code><a class="headerlink" href="#pybpl.library.Library.ncpt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of control points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>ncpt</strong> – the number of control points</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.Library.pT">
+<code class="sig-name descname">pT</code><span class="sig-paren">(</span><em class="sig-param">prev_state</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.Library.pT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the probability of transitioning to a new state, given your current
+state is “prev_state”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prev_state</strong> (<em>tensor</em>) – current state of the model</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>p</strong> – probability vector; probabilities of transitioning to
+each potential new state</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pybpl.library.SpatialHist">
+<em class="property">class </em><code class="sig-prename descclassname">pybpl.library.</code><code class="sig-name descname">SpatialHist</code><span class="sig-paren">(</span><em class="sig-param">xlim</em>, <em class="sig-param">ylim</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialHist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>xlim : (2,) tensor
+ylim : (2,) tensor</p>
+<dl class="method">
+<dt id="pybpl.library.SpatialHist.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialHist.fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>n</em><em>,</em><em>2</em><em>) </em><em>tensor</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.SpatialHist.initialize_unif">
+<code class="sig-name descname">initialize_unif</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialHist.initialize_unif" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.SpatialHist.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">nsamp</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialHist.sample" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nsamp</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>samples</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n,2) tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.SpatialHist.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialHist.score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>(</em><em>n</em><em>,</em><em>2</em><em>) </em><em>tensor</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ll</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n,) tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pybpl.library.SpatialModel">
+<em class="property">class </em><code class="sig-prename descclassname">pybpl.library.</code><code class="sig-name descname">SpatialModel</code><span class="sig-paren">(</span><em class="sig-param">xlim</em>, <em class="sig-param">ylim</em>, <em class="sig-param">clump_ID</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Use specific distributions if 0 &lt;= part_ID &lt; clump_ID, or a clump
+clump distribution if part_ID &gt;= clump_ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xlim</strong> – </p></li>
+<li><p><strong>ylim</strong> – </p></li>
+<li><p><strong>clump_ID</strong> (<em>int</em>) – part index at which we begin clumping</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="pybpl.library.SpatialModel.fit">
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">data_id</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialModel.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.SpatialModel.initialize_unif">
+<code class="sig-name descname">initialize_unif</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialModel.initialize_unif" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.SpatialModel.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">part_IDs</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialModel.sample" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>part_IDs</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>tensor</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>samples</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n,2) tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pybpl.library.SpatialModel.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">part_IDs</em><span class="sig-paren">)</span><a class="headerlink" href="#pybpl.library.SpatialModel.score" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>(</em><em>n</em><em>,</em><em>2</em><em>) </em><em>tensor</em>) – </p></li>
+<li><p><strong>part_IDs</strong> (<em>(</em><em>n</em><em>,</em><em>) </em><em>tensor</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ll</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(n,) tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="pyBPL: Python-based Bayesian Program Learning"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pyBPL 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Reuben Feinman.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>
